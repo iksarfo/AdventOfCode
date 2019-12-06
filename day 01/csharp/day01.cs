@@ -2,9 +2,9 @@
 using System.Linq;
 using NUnit.Framework;
 
-namespace AOC._2019.Day1
+namespace AdventOfCode2019
 {
-    public static class Solution
+    public static class Day01
     {
         public static int GetFuelRequirements(int moduleMass, bool includeFuelMass = false)
         {
@@ -28,28 +28,28 @@ namespace AOC._2019.Day1
     public class Day1Tests
     {
         [Test]
-        public void Mass_12() => Assert.AreEqual(2, Solution.GetFuelRequirements(12));
+        public void Mass_12() => Assert.AreEqual(2, Day01.GetFuelRequirements(12));
 
         [Test]
-        public void Mass_14_Part_One() => Assert.AreEqual(2, Solution.GetFuelRequirements(14));
+        public void Mass_14_Part_One() => Assert.AreEqual(2, Day01.GetFuelRequirements(14));
 
         [Test]
-        public void Mass_14_Part_Two() => Assert.AreEqual(2, Solution.GetFuelRequirements(14, true));
+        public void Mass_14_Part_Two() => Assert.AreEqual(2, Day01.GetFuelRequirements(14, true));
 
         [Test]
-        public void Mass_1969_Part_One() => Assert.AreEqual(654, Solution.GetFuelRequirements(1969));
+        public void Mass_1969_Part_One() => Assert.AreEqual(654, Day01.GetFuelRequirements(1969));
 
         [Test]
-        public void Mass_1969_Part_Two() => Assert.AreEqual(966, Solution.GetFuelRequirements(1969, true));
+        public void Mass_1969_Part_Two() => Assert.AreEqual(966, Day01.GetFuelRequirements(1969, true));
 
         [Test]
-        public void Mass_100756() => Assert.AreEqual(33583, Solution.GetFuelRequirements(100756));
+        public void Mass_100756() => Assert.AreEqual(33583, Day01.GetFuelRequirements(100756));
 
         [Test]
-        public void Mass_100756_Part_One() => Assert.AreEqual(33583, Solution.GetFuelRequirements(100756));
+        public void Mass_100756_Part_One() => Assert.AreEqual(33583, Day01.GetFuelRequirements(100756));
 
         [Test]
-        public void Mass_100756_Part_Two() => Assert.AreEqual(50346, Solution.GetFuelRequirements(100756, true));
+        public void Mass_100756_Part_Two() => Assert.AreEqual(50346, Day01.GetFuelRequirements(100756, true));
 
         [Test]
         public void PartOne()
@@ -57,7 +57,7 @@ namespace AOC._2019.Day1
             var sumOfModuleMasses =
                 File.ReadAllLines(@"C:\Temp\input.txt")
                     .Select(int.Parse)
-                    .Sum(moduleMass => Solution.GetFuelRequirements(moduleMass));
+                    .Sum(moduleMass => Day01.GetFuelRequirements(moduleMass));
 
             Assert.AreEqual(3269199, sumOfModuleMasses);
         }
@@ -68,7 +68,7 @@ namespace AOC._2019.Day1
             var sumOfModuleMasses =
                 File.ReadAllLines(@"C:\Temp\input.txt")
                     .Select(int.Parse)
-                    .Sum(_ => Solution.GetFuelRequirements(_, true));
+                    .Sum(_ => Day01.GetFuelRequirements(_, true));
 
             Assert.AreEqual(4900909, sumOfModuleMasses);
         }
