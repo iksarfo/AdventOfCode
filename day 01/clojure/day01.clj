@@ -16,9 +16,7 @@
 (assert (= 3269199 part-one-answer))
 
 (defn get-total-fuel-required [mass]
-    (comment (println mass))
     (def fuel-need (get-fuel-required mass))
-    (comment (println fuel-need))
     (if (<= fuel-need 0) 0 (+ fuel-need (get-total-fuel-required fuel-need))))
 
 (assert (= 2 (get-total-fuel-required 12)))
