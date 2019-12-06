@@ -6,8 +6,8 @@ let haltCode = 99
 
 let ops =
   [
-    1, (fun x y -> x + y); 
-    2, fun x y -> x * y;
+    1, (+); 
+    2, (*);
   ]
   |> Map.ofList
 
