@@ -17,7 +17,7 @@
         (<= (parse-int number) (parse-int max))))
 
 (defn same-adjacent-chars? [head tail]
-    (if (or (= 0 (count head)) (= 0 (count tail)))
+    (if (or (empty? head) (empty? tail))
         false
         (if (= head (top tail))
             true
@@ -27,19 +27,19 @@
     (same-adjacent-chars? (top password) (remaining password)))
 
 (defn not-decreases? [head tail]
-    (if (= 0 (count tail)) 
+    (if (empty? tail)
         true
         (<= (parse-int head) (parse-int (top tail)))))
 
 (defn never-decreases? [numbers]
-    (if (= 0 (count numbers)) 
+    (if (empty? numbers)
         true
         (if (not-decreases? (top numbers) (remaining numbers))
             (never-decreases? (remaining numbers))   
             false)))
 
 (defn verify [checks input]
-    (if (= 0 (count checks))
+    (if (empty? checks)
         true
         (and ((first checks) input) (verify (rest checks) input))))
 
