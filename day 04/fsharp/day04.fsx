@@ -13,19 +13,18 @@ let hasAdjacents input =
     let intSeq = numberToSequence input
     hasAdjacent (Seq.skip 1 intSeq) (Seq.head intSeq)
 
-let evenNumberedAdjacents input =
+let hasAdjacentOfLength length input =
     let checkValid count =
-        count = 1
-        || (count % 2) = 0
+        count = length
 
-    let rec adjacentCountOkay count head (tail: seq<int>) =
+    let rec checkAdjacents count head (tail: seq<int>) =
         if(Seq.isEmpty tail) then checkValid count
-        elif head = (Seq.head tail) then adjacentCountOkay (count + 1) (Seq.head tail) (Seq.skip 1 tail) 
-        else (checkValid count) && (adjacentCountOkay 1 (Seq.head tail) (Seq.skip 1 tail))
+        elif head = (Seq.head tail) then checkAdjacents (count + 1) (Seq.head tail) (Seq.skip 1 tail) 
+        else (checkValid count) || (checkAdjacents 1 (Seq.head tail) (Seq.skip 1 tail))
 
     let intSeq = numberToSequence input
 
-    adjacentCountOkay 1 (Seq.head intSeq) (Seq.skip 1 intSeq)
+    checkAdjacents 1 (Seq.head intSeq) (Seq.skip 1 intSeq)
 
 let isIncreasing input =
     let rec exceeds (latter: seq<int>) former =
@@ -40,8 +39,6 @@ let passwords = seq { 200000 .. 800000 }
 passwords
 |> Seq.filter (withinRange 240920 789857)
 |> Seq.filter hasAdjacents
-|> Seq.filter evenNumberedAdjacents
+|> Seq.filter (hasAdjacentOfLength 2)
 |> Seq.filter isIncreasing
 |> Seq.length
-
-
