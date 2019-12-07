@@ -43,15 +43,6 @@
         true
         (and ((first checks) input) (verify (rest checks) input))))
 
-(comment 
-    (verify 
-        [
-            right-lenth?
-            (partial within-range? "240920" "789857")
-            same-adjacent?
-            never-decreases?
-        ] "345677"))
-
 (defn partial-verify[] 
     (partial verify [
         right-lenth?
