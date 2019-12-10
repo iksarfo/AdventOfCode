@@ -26,3 +26,14 @@
 - Fun problem
 - Just Pthon syntax to contend with
 - Succinct problem definitions allow for less ambiguity
+
+**--- Day 7: [Amplification Circuit](https://adventofcode.com/2019/day/7) ---**
+-- I didn't fancy this one yet...
+-- The problem definition wasn't clear to me (and only me it seems)
+-- Right now my preference is to use Python/C# for this kind of thing
+
+**--- Day 8: [Space Image Format](https://adventofcode.com/2019/day/8) ---**
+-- Silly bug
+-- Mind the bad habits when coding tired
+-- Getting the answer is one thing
+-- The Pythonic is something else
