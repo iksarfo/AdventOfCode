@@ -1,5 +1,4 @@
-# AdventOfCode
-See https://adventofcode.com/
+# [AdventOfCode](https://adventofcode.com/)
 
 --- **Day 1:** [The Tyranny of the Rocket Equation](https://adventofcode.com/2019/day/1) ---
 - C# implementation took no time but the solution looks + feels clunky!
