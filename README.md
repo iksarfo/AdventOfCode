@@ -18,6 +18,12 @@ See https://adventofcode.com/
 
 --- **Day 5:** [Sunny with a Chance of Asteroids](https://adventofcode.com/2019/day/5) ---
 - I really didn't want to do this in F#
-- Trying to do this 'idiomatically' was a bit painful and there's nothing gained by not mutating memory in place
-- Spent ages debugging when the code was already working
-- Infinitely easier coding during the evening!
+- Trying to do this 'idiomatically' wasn't fun
+- Nothing gained by not mutating memory in place
+- Spent ages debugging (code was already working correctly)
+- Easier coding during the evening!
+
+--- **Day 6:** [Universal Orbit Map](https://adventofcode.com/2019/day/6) ---
+- Fun problem
+- Just Pthon syntax to contend with
+- Succinct problem definitions allow for less ambiguity
