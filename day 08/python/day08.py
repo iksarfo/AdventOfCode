@@ -30,5 +30,25 @@ layer_fewest = layers[fewest[fewest_zeros]]
 
 part_one = len(findDigits(layer_fewest, '1')) * len(findDigits(layer_fewest, '2'))
 
+part_two = []
+
+for y in range(0, height):
+    for x in range(0, width):
+        z = 0
+        i = y * width + x
+
+        while True:
+            pixel = layers[z][i]
+            z += 1
+            if pixel != '2':
+                break
+
+        part_two.append(pixel)
+
+for y in range(0, height):
+    read_start = y * width
+    read_end = read_start + width
+    line = ''.join(part_two[read_start:read_end])
+    print(line.replace('0', " ").replace('1', '*'))
 
 
