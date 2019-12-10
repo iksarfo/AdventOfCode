@@ -18,21 +18,39 @@ def _get_orbits():
 
     return orbits
 
-def _count_objects_orbits(o, maps):
-    count = 0
+def _get_objects_orbits(o, maps):
+    orbits = {}
 
     while o in maps:
-        count += 1
+        orbits[maps[o]] = o
         o = maps[o]
 
-    return count
+    return orbits
 
 def _count_all_orbits(maps):
     count = 0
 
     for o in maps.keys():
-        count += _count_objects_orbits(o,maps)
+        count += len(_get_objects_orbits(o,maps))
     
     return count
 
+# Part one
 _count_all_orbits(_get_orbits())
+
+def _get_distance(to,orbits):
+    return list(orbits.keys()).index(to)
+
+def _orbital_transfers(fro,to,orbits):
+    mine =  _get_objects_orbits(fro, orbits)
+    santas = _get_objects_orbits(to, orbits)
+
+    distances = {}
+    for o in santas.keys():
+        if o in mine:
+            distances[o] = _get_distance(o, mine) + _get_distance(o, santas)
+
+    return distances.values()
+
+# Part two
+min(_orbital_transfers('YOU', 'SAN', _get_orbits()))
