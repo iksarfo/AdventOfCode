@@ -42,7 +42,7 @@
 - Skipped... *yawn*
 
 **--- Day 10: [Monitoring Station](https://adventofcode.com/2019/day/10) ---**
-- Best problem yet
+- Favourite problem so far
 - It's hard writing Clojure tired
-- The lack of types meant it was necessary to rememmber the arguments' data structures
+- The lack of types meant it was necessary to memorise the arguments' data structures
 - Probably worth using [spec](https://clojure.org/guides/spec) for future problems
