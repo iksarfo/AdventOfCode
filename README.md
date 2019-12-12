@@ -28,12 +28,21 @@
 - Succinct problem definitions allow for less ambiguity
 
 **--- Day 7: [Amplification Circuit](https://adventofcode.com/2019/day/7) ---**
--- I didn't fancy this one yet...
--- The problem definition wasn't clear to me (and only me it seems)
--- Right now my preference is to use Python/C# for this kind of thing
+- I didn't fancy this one yet...
+- The problem definition wasn't clear to me (and only me it seems)
+- Right now my preference is to use Python/C# for this kind of thing
 
 **--- Day 8: [Space Image Format](https://adventofcode.com/2019/day/8) ---**
--- Silly bug
--- Mind the bad habits when coding tired
--- Getting the answer is one thing
--- The Pythonic is something else
+- Silly bug
+- Mind the bad habits when coding tired
+- Getting the answer is one thing
+- The Pythonic is something else
+
+**--- Day 9: [Amplification Circuit](https://adventofcode.com/2019/day/7) ---**
+- Skipped... *yawn*
+
+**--- Day 10: [Monitoring Station](https://adventofcode.com/2019/day/10) ---**
+- Best problem yet
+- It's hard writing Clojure tired
+- The lack of types meant it was necessary to rememmber the arguments' data structures
+- Probably worth using [spec](https://clojure.org/guides/spec) for future problems
